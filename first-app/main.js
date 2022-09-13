@@ -3,7 +3,7 @@ const path = require('path')
 
 //creacion de la vetana principal
 function createWindow () {
-    
+
     //tomarse win como variable de la ventana principal
   const win = new BrowserWindow({
     width: 800,
@@ -22,6 +22,7 @@ app.whenReady().then(() => {
   createWindow()
 
 
+    //cuando se cierre la ventana principal se cierra la aplicacion
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow()
